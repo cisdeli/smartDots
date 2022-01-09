@@ -1,0 +1,9 @@
+*
+!*.*
+!*/
+*.exe
+*.out
+*.hex
+*.o
+*.zip
+!Makefile
