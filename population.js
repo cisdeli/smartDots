@@ -12,7 +12,6 @@ class Population {
     // ----- SELECTION METHODS -----
 
     // Elitism selection: the best one crossovers with all the other individuals.
-    // Probably needs fixing, cause converges.
     elitismSelection() {
         let best = this.dots[this.best_i].brain;
         let newdots = [];
@@ -86,7 +85,7 @@ class Population {
             this.dots[i].calcFitness();
             if (this.dots[i].fitness > maxfit) {
                 maxfit = this.dots[i].fitness;
-                this.max_i = i;
+                this.best_i = i;
             }
         }
 

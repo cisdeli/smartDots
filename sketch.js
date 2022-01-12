@@ -78,7 +78,7 @@ function draw() {
     if (steps == maxSteps) {
         getInfo();
         population.evaluate();
-        population.reproduce('ROULETTE');
+        population.reproduce('ELITISM');
         steps = 0;
         death = population.pop - won;
         won = 0;
