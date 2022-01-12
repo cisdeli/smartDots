@@ -12,12 +12,13 @@ class Population {
     // ----- SELECTION METHODS -----
 
     // Elitism selection: the best one crossovers with all the other individuals.
+    // Probably needs fixing, cause converges.
     elitismSelection() {
         let best = this.dots[this.best_i].brain;
         let newdots = [];
         for (let i = 0; i < this.dots.length; i++) {
             if (i == this.best_i) {
-                newdots[i] = new Dot(this.dots[this.best_i].brain);
+                newdots[i] = new Dot(best);
                 continue;
             }
             let parentB = this.dots[i].brain;
