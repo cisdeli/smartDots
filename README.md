@@ -15,6 +15,7 @@ Vídeo de Apresentação:
 - [ ] Fix GA to include best dot?
 - [ ] Create more selection methods.
 - [ ] Generate graph with data from all 3 selection methods.
+- [ ] Reorganize files into folders.
 
 ## Autores
 
