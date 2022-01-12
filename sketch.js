@@ -19,9 +19,9 @@ function preload() {
     font1 = loadFont('fonts/Minecraft.ttf');
 }
 
-function getInfo(){
-    for(let i = 0; i < population.pop; i++)
-        if(population.dots[i].won == true)
+function getInfo() {
+    for (let i = 0; i < population.pop; i++)
+        if (population.dots[i].won == true)
             won++;
 }
 
@@ -34,16 +34,16 @@ function drawInfo() {
     text('Generation: ' + genNum, 300, 20);
     text('Steps: ' + steps, 300, 40);
     text('Population: ' + population.pop, 100, 20);
-    text('Stats for generation: '+ lastGenNum, 200, 90);
+    text('Stats for generation: ' + lastGenNum, 200, 90);
     text('KIA: ' + death, 200, 120);
 }
 
-function drawGameArea(){
+function drawGameArea() {
     push();
     stroke(255, 255, 255);
     strokeWeight(4);
     line(windowWidth / 3, 0, windowWidth / 3, windowHeight);
-    line(windowWidth / 1.5, 0, windowWidth/1.5, windowHeight);
+    line(windowWidth / 1.5, 0, windowWidth / 1.5, windowHeight);
 
     line(windowWidth / 3, 0, windowWidth / 1.5, 0);
     line(windowWidth / 3, windowHeight, windowWidth / 1.5, windowHeight)
@@ -65,10 +65,10 @@ function draw() {
     background(0);
 
     target.show();
-    for(let i = 0; i < obstacles.length; i++){
-    obstacles[i].show();
-        for(let j = 0; j < population.pop; j++)
-            if(obstacles[i].hits(population.dots[j]))
+    for (let i = 0; i < obstacles.length; i++) {
+        obstacles[i].show();
+        for (let j = 0; j < population.pop; j++)
+            if (obstacles[i].hits(population.dots[j]))
                 population.dots[j].dead = true;
     }
     population.run();
@@ -77,16 +77,14 @@ function draw() {
     drawGameArea();
     if (steps == maxSteps) {
         getInfo();
-
         population.evaluate();
-        population.nSelection();
-
+        population.reproduce('TOURNAMENT');
         steps = 0;
         death = population.pop - won;
         won = 0;
 
         // limitar a qtd max de geracoes expostas no grafico
-        if(genNum <= 100){
+        if (genNum <= 100) {
             data.x.push(genNum);
             data.y.push(death);
             graph.setData(data);
