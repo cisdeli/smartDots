@@ -3,6 +3,19 @@ SmartRocketsGA é o projeto final desenvolvido para a disciplina SSC0713-Sistema
 
 Vídeo de Apresentação: 
 
+## to-Do
+- [x] Resize application window and create a central area for the game.
+- [x] Rename project. (espero n ter esquecido nada, se quiser olhar)
+- [x] Fix bugs with death and successful dots info.
+- [x] Create graphical representation object.
+- [ ] Make it generic. (talvez)
+- [ ] Center top info with bottom graph.
+- [ ] Fix or hide graph for population sizes != 100.
+- [ ] Place better objects.
+- [ ] Fix GA to include best dot?
+- [ ] Create more selection methods.
+- [ ] Generate graph with data from all 3 selection methods.
+
 ## Autores
 
 - [Pedro Henrique Magalhaes Cisdeli](https://github.com/sprmbng) - 10289804
