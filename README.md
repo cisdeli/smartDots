@@ -1,5 +1,5 @@
-# SmartRocketsGA
-SmartRocketsGA é o projeto final desenvolvido para a disciplina SSC0713-Sistemas-Evolutivos-Aplicados-a-Robótica. Inspirado no [Smart Rockets](https://shivank1006.github.io/Smart-Rockets/), o projeto tem como intuito aplicar os conceitos estudados em sala de aula e analisar como o algoritmo resolve o problema.
+# SmartDotsGA
+SmartDotsGA é o projeto final desenvolvido para a disciplina SSC0713-Sistemas-Evolutivos-Aplicados-a-Robótica. Inspirado no [Smart Rockets](https://shivank1006.github.io/Smart-Rockets/), o projeto tem como intuito aplicar os conceitos estudados em sala de aula e analisar como o algoritmo resolve o problema.
 
 Vídeo de Apresentação: 
 
@@ -16,6 +16,8 @@ Vídeo de Apresentação:
 - [ ] Create more selection methods.
 - [ ] Generate graph with data from all 3 selection methods.
 - [ ] Reorganize files into folders.
+- [ ] Document code.
+- [ ] Check current selection method.
 
 ## Autores
 
@@ -47,5 +49,10 @@ A mutação consiste na troca do valor de um gene do cromossomo. A taxa de muta�
 
 
 ## Análise dos resultados
+
+
+## Implementação
+O projeto foi desenvolvido na linguagem de programação JavaScript, com auxílio da biblioteca p5 na parte gráfica.
+A aplicação foi desenvolvida para ser usada em um monitor 16:9 com o browser em fullscreen.
 
 
