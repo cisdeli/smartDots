@@ -15,7 +15,7 @@ class Graph {
 
     show(){
         push();
-        translate(80, height/2);
+        translate(80, height/3);
         stroke(220);
         //y
         for (var j = 0; j <= this.size; j = j + Math.floor(this.size / this.yMax)){
