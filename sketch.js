@@ -2,7 +2,7 @@ let population;
 let obstacles = [];
 let target;
 
-let maxSteps = 500;
+let maxSteps = 550;
 let steps = 0;
 let genNum = 1;
 let lastGenNum = 0;
@@ -12,6 +12,7 @@ let won = 0;
 let data;
 let xData = [];
 let yData = [];
+let csvData;
 
 let font1;
 
@@ -54,11 +55,24 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     population = new Population();
     target = new Target();
-    obstacles[0] = new Obstacle(windowWidth / 2, windowHeight / 2);
-    obstacles[1] = new Obstacle(windowWidth / 3, windowHeight / 4);
+    obstacles[0] = new Obstacle(windowWidth / 1.8, windowHeight / 2);
+    obstacles[1] = new Obstacle(windowWidth / 2.23, windowHeight / 3);
+    obstacles[2] = new Obstacle(windowWidth / 3.0, windowHeight / 1.5);
 
     graph = new Graph(0, 0, 10, population.pop / 10);
     data = createVector(xData, yData);
+    csvData = new p5.Table();
+    csvData.addColumn('gen');
+    csvData.addColumn('failed');
+}
+
+function saveCsv(){
+    saveTable(csvData, 'data.csv');
+}
+
+function keyPressed() {
+    if (keyCode === ENTER)
+        saveCsv();
 }
 
 function draw() {
@@ -78,7 +92,7 @@ function draw() {
     if (steps == maxSteps) {
         getInfo();
         population.evaluate();
-        population.reproduce('ELITISM');
+        population.reproduce('ROULETTE');
         steps = 0;
         death = population.pop - won;
         won = 0;
@@ -88,13 +102,18 @@ function draw() {
             data.x.push(genNum);
             data.y.push(death);
             graph.setData(data);
+
+            let newRow = csvData.addRow();
+            newRow.setNum('gen', genNum);
+            newRow.setNum('failed', death);
         }
 
         genNum++;
         lastGenNum++;
     }
 
-    graph.show();
+    if(population.pop == 100)
+        graph.show();
 
     drawInfo();
 }
