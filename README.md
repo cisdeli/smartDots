@@ -17,7 +17,7 @@ Vídeo de Apresentação:
 - [ ] Generate graph with data from all 3 selection methods.
 - [ ] Reorganize files into folders.
 - [ ] Document code.
-- [ ] Check current selection method.
+- [x] Check current selection method.
 
 ## Autores
 
@@ -35,18 +35,19 @@ O fitness é calculado baseado no inverso da distância euclidiana entre a bolin
 
 ### Seleção
 Foram utilizados diferentes métodos de seleção a fim de comparar qual se adeque melhor ao nosso problema:
+- Elitismo: o melhor indíviduo (que possui maior fitness) cruza com todos os outros indíviduos.
+- Torneio de 2: são realizados sucessivos torneios para definir os pais que cruzarão.
 - Roleta: são selecionados n indivíduos aleatoriamente a partir de uma distribuição com probabilidades proporcionais ao fitness de cada indivíduo. Ou seja, indivíduos com maior fitness tendem a reproduzir com mais frequência que indivíduos com menor fitness, portanto eles têm maior chance de serem selecionados.
 
 ---
 
 ### Crossover
-O crossover é calculado pela média do fitness de dois indivíduos aleatórios, gerando assim um filho que herda as características de ambos.
+O crossover é feito utilizando o método tradicional de dividir os cromossos dois pais ao meio, gerando assim um filho que herda as características de ambos.
 
 ---
 
 ### Mutação
-A mutação consiste na troca do valor de um gene do cromossomo. A taxa de mutação define a probabilidade dessa troca ocorrer.
-
+A mutação consiste na troca do valor de um gene do cromossomo. Portanto, para cada gene do cromossomo, a taxa de mutação define a probabilidade dessa troca ocorrer.
 
 ## Análise dos resultados
 
