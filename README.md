@@ -8,12 +8,10 @@ Vídeo de Apresentação:
 - [x] Rename project. (espero n ter esquecido nada, se quiser olhar)
 - [x] Fix bugs with death and successful dots info.
 - [x] Create graphical representation object.
-- [ ] Make it generic. (talvez)
-- [ ] Center top info with bottom graph.
-- [ ] Fix or hide graph for population sizes != 100.
-- [ ] Place better objects.
-- [ ] Fix GA to include best dot?
-- [ ] Create more selection methods.
+- [x] Center top info with bottom graph.
+- [x] Fix or hide graph for population sizes != 100.
+- [x] Place better objects.
+- [x] Create more selection methods.
 - [ ] Generate graph with data from all 3 selection methods.
 - [ ] Reorganize files into folders.
 - [ ] Document code.
