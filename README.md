@@ -3,20 +3,6 @@ SmartDotsGA é o projeto final desenvolvido para a disciplina SSC0713-Sistemas-E
 
 Vídeo de Apresentação: 
 
-## to-Do
-- [x] Resize application window and create a central area for the game.
-- [x] Rename project. (espero n ter esquecido nada, se quiser olhar)
-- [x] Fix bugs with death and successful dots info.
-- [x] Create graphical representation object.
-- [x] Center top info with bottom graph.
-- [x] Fix or hide graph for population sizes != 100.
-- [x] Place better objects.
-- [x] Create more selection methods.
-- [ ] Generate graph with data from all 3 selection methods.
-- [ ] Reorganize files into folders.
-- [ ] Document code.
-- [x] Check current selection method.
-
 ## Autores
 
 - [Pedro Henrique Magalhaes Cisdeli](https://github.com/sprmbng) - 10289804
@@ -48,7 +34,14 @@ O crossover é feito utilizando o método tradicional de dividir os cromossos do
 A mutação consiste na troca do valor de um gene do cromossomo. Portanto, para cada gene do cromossomo, a taxa de mutação define a probabilidade dessa troca ocorrer.
 
 ## Análise dos resultados
+Testamos diferentes formas de seleção: elitismo, torneio de 2 e roleta. O elitismo foi o que mais demorou a convergir, e não foi possível testá-lo tão bem, portanto os gráficos a seguir mostram três instâncias da roleta e o torneio de 2.
 
+![Roleta](img/roulette_instances.png)
+![Torneio de 2](img/tournament_instances.png)
+
+Comparando os melhores de ambos métodos temos:
+
+![Comparação](img/compare.png)
 
 ## Implementação
 O projeto foi desenvolvido na linguagem de programação JavaScript, com auxílio da biblioteca p5 na parte gráfica.
