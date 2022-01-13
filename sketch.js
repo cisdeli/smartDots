@@ -2,7 +2,7 @@ let population;
 let obstacles = [];
 let target;
 
-let maxSteps = 550;
+let maxSteps = 600;
 let steps = 0;
 let genNum = 1;
 let lastGenNum = 0;
@@ -32,11 +32,11 @@ function drawInfo() {
     textAlign(CENTER, CENTER);
     textSize(20);
     noStroke();
-    text('Generation: ' + genNum, 300, 20);
-    text('Steps: ' + steps, 300, 40);
-    text('Population: ' + population.pop, 100, 20);
-    text('Stats for generation: ' + lastGenNum, 200, 90);
-    text('KIA: ' + death, 200, 120);
+    text('Generation: ' + genNum, 380, 20);
+    text('Steps: ' + steps, 380, 40);
+    text('Population: ' + population.pop, 200, 20);
+    text('Stats for generation: ' + lastGenNum, 280, 90);
+    text('KIA: ' + death, 280, 120);
 }
 
 function drawGameArea() {
