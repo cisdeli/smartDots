@@ -8,6 +8,20 @@ SmartDots é o projeto final desenvolvido para a disciplina SSC0713-Sistemas-Evo
 - [Pedro Henrique Magalhaes Cisdeli](https://github.com/sprmbng) - 10289804
 - [Maria Eduardo Kawakami Moreira](https://github.com/madukm) - 11218751
 
+## Execução
+
+### Clone o repositório
+```sh
+  $ git clone https://github.com/sprmbng/smartDots.git
+```
+### Inicie um web server com python
+```sh
+  $ cd smartDots
+  $ python -m http.server [port]
+```
+#### Acesse a aplicação por meio do endereço *localhost:[port]*
+
+
 ## O problema
 
 O problema consiste em uma população de bolinhas, no qual cada bolinha tem por objetivo chegar até um alvo definido sem colidir com os obstáculos no caminho.
