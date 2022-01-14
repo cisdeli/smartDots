@@ -1,7 +1,7 @@
 # SmartDots
 SmartDots é o projeto final desenvolvido para a disciplina SSC0713-Sistemas-Evolutivos-Aplicados-a-Robótica. Inspirado no [Smart Rockets](https://shivank1006.github.io/Smart-Rockets/), o projeto tem como intuito aplicar os conceitos estudados em sala de aula e analisar como o algoritmo resolve o problema.
 
-Vídeo de Apresentação: 
+[Vídeo de Apresentação](https://drive.google.com/file/d/1W_L4lgKe_9tNLu3BC0Q6oWBerg-64kCb/view?usp=sharing)
 
 ## Autores
 
